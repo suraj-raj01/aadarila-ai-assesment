@@ -64,7 +64,7 @@ export default function Docsim() {
           <div className="relative flex justify-end">
             <div className="relative z-10 overflow-hidden rounded-3xl shadow-xl">
               <Image
-                src="/products/docsim.png"
+                src="/products/DocSim.png"
                 alt="DocSim Product"
                 width={520}
                 height={520}
