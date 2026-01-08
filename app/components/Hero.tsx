@@ -1,7 +1,9 @@
 "use client";
+
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import clsx from "clsx";
+import { motion } from "framer-motion";
 
 const images = [
     "/heroimg/License.png",
@@ -36,7 +38,12 @@ export default function HeroSection() {
                 <div className="grid grid-cols-1 items-center gap-16 md:grid-cols-2">
 
                     {/* LEFT CONTENT */}
-                    <div className="text-center md:text-left">
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="text-center md:text-left"
+                    >
                         <p className="mb-3 text-3xl font-semibold bg-[linear-gradient(90deg,#CD6028_11%,#3E6EB4_100%)] bg-clip-text text-transparent sm:text-4xl lg:text-5xl">
                             AI-Powered
                         </p>
@@ -52,18 +59,23 @@ export default function HeroSection() {
                         </p>
 
                         <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center md:justify-start">
-                            <button className="rounded-full bg-[#3E6EB4] px-8 py-3 text-sm font-medium text-white sm:text-base">
+                            <button className="rounded-full w-full md:w-fit bg-[#3E6EB4] px-8 py-3 text-sm font-medium text-white sm:text-base">
                                 Get a Demo
                             </button>
-                            <button className="rounded-full bg-[#3E6EB4] px-8 py-3 text-sm font-medium text-white sm:text-base">
+                            <button className="rounded-full w-full md:w-fit bg-[#3E6EB4] px-8 py-3 text-sm font-medium text-white sm:text-base">
                                 Explore Solutions
                             </button>
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* RIGHT CAROUSEL */}
-                    <div className="relative flex items-center justify-center">
-                        <div className="relative h-[420px] w-full sm:h-[480px]">
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.8 }}
+                        className="relative flex items-center justify-center"
+                    >
+                        <div className="relative h-[360px] sm:h-[420px] md:h-[480px] w-full">
 
                             {images.map((img, index) => {
                                 const offset = getOffset(index);
@@ -73,7 +85,7 @@ export default function HeroSection() {
                                     <div
                                         key={img}
                                         className={clsx(
-                                            "absolute top-1/2 left-1/2 transition-all duration-700",
+                                            "absolute top-1/2 left-1/2 transition-all duration-700 ease-in-out",
                                             {
                                                 "z-20 scale-100 opacity-100": isActive,
                                                 "z-10 scale-90 opacity-60 blur-sm": Math.abs(offset) === 1,
@@ -88,9 +100,10 @@ export default function HeroSection() {
                                             <Image
                                                 src={img}
                                                 alt="Document"
-                                                width={300}
+                                                width={400}
                                                 height={420}
-                                                className="rounded-xl sm:w-[340px] lg:w-[380px]"
+                                                className="rounded-xl h-72 sm:h-80 md:h-110 w-auto"
+                                                priority={isActive}
                                             />
 
                                             {/* SCAN OVERLAY */}
@@ -99,9 +112,9 @@ export default function HeroSection() {
                                                     <div
                                                         className="absolute inset-0 bg-[url('/heroimg/scanner.png')] opacity-70"
                                                         style={{
-                                                            backgroundSize: '320px 50px',
-                                                            backgroundRepeat: 'no-repeat',
-                                                            animation: 'scan-vertical 8s linear infinite',
+                                                            backgroundSize: "320px 50px",
+                                                            backgroundRepeat: "no-repeat",
+                                                            animation: "scan-vertical 8s linear infinite",
                                                         }}
                                                     />
                                                 </div>
@@ -112,11 +125,10 @@ export default function HeroSection() {
                             })}
 
                         </div>
-                    </div>
+                    </motion.div>
 
                 </div>
             </div>
         </section>
-
     );
 }
