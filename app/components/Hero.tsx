@@ -96,13 +96,13 @@ export default function HeroSection() {
                                             transform: `translate(-50%, -50%) translateX(${offset * 120}px)`,
                                         }}
                                     >
-                                        <div className="relative overflow-hidden rounded-xl">
+                                        <div className="relative md:overflow-hidden rounded-xl">
                                             <Image
                                                 src={img}
                                                 alt="Document"
                                                 width={400}
                                                 height={420}
-                                                className="rounded-xl h-72 sm:h-80 md:h-110 w-auto"
+                                                className="rounded-xl h-65 md:h-110 md:w-auto"
                                                 priority={isActive}
                                             />
 

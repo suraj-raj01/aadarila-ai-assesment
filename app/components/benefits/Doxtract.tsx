@@ -1,12 +1,13 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Doxtract() {
   return (
-    <section className="mt-5 flex items-center justify-between relative overflow-hidden bg-[url('/Industries/circle.png')] bg-no-repeat bg-right bg-contain h-150">
+    <section className="mt-5 flex items-center justify-between relative overflow-hidden bg-[url('/Industries/circle.png')] bg-no-repeat bg-right bg-contain min-h-screen">
       {/* dotted decoration */}
-      <div className="absolute left-40 -z-1 top-15">
+      <div className="absolute md:left-40 -z-1 top-15">
         <Image
           src='/Industries/Group-2-Copy-2.png'
           height={200}
@@ -18,7 +19,13 @@ export default function Doxtract() {
       <div className="mx-auto max-w-full px-6 md:px-20">
         <div className="grid grid-cols-1 items-center gap-14 md:grid-cols-2">
           {/* LEFT CONTENT */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+            className="order-2 md:order-1"
+          >
             <span className="inline-block rounded-full bg-[linear-gradient(90deg,#CD6028_11%,#3E6EB4_100%)] px-5 py-2 text-sm font-medium text-white">
               Doxtract
             </span>
@@ -45,28 +52,34 @@ export default function Doxtract() {
             </div>
 
             <div className="mt-6 flex flex-col gap-4 sm:flex-row">
-              <button className="rounded-full bg-[#3E6EB4] px-6 py-3 text-sm font-medium text-white transition ">
+              <button className="rounded-full bg-[#3E6EB4] px-6 py-3 text-sm font-medium text-white transition hover:scale-105">
                 Learn More
               </button>
-              <button className="rounded-full bg-[#3E6EB4] px-6 py-3 text-sm font-medium text-white transition">
+              <button className="rounded-full bg-[#3E6EB4] px-6 py-3 text-sm font-medium text-white transition hover:scale-105">
                 Schedule a Demo
               </button>
             </div>
-          </div>
+          </motion.div>
 
           {/* RIGHT IMAGE */}
-          <div className="relative flex justify-end">
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+            className="order-1 md:order-2 relative flex justify-end"
+          >
             <div className="relative z-10 overflow-hidden rounded-3xl shadow-xl">
               <Image
                 src="/products/doxtract.png"
-                alt="DocSim Product"
+                alt="Doxtract Product"
                 width={520}
                 height={520}
                 className="h-100 w-full max-w-md md:max-w-lg"
                 priority
               />
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

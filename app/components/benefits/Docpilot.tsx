@@ -1,39 +1,51 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Docpilot() {
   return (
-    <section className=" relative items-center justify-between flex overflow-hidden bg-[url('/Industries/circle.png')] bg-no-repeat bg-left bg-contain h-150">
-      {/* dotted decoration */}
-      <div className="absolute right-30 top-5">
+    <section className="relative overflow-hidden bg-[url('/Industries/circle.png')] bg-no-repeat bg-left bg-contain px-4 sm:px-6 md:px-20 py-20 min-h-145">
+      {/* Dotted decoration */}
+      <div className="absolute right-0 top-5 md:right-30">
         <Image
-          src='/Industries/Group-2.png'
+          src="/Industries/Group-2.png"
           height={120}
           width={120}
           alt=""
         />
       </div>
 
-      <div className="mx-auto w-full px-6 md:px-20">
+      <div className="mx-auto w-full">
         <div className="grid grid-cols-1 items-center gap-14 md:grid-cols-2">
-          {/* LEFT CONTENT */}
-          <div className="relative flex justify-start">
+          {/* LEFT IMAGE */}
+          <motion.div
+            className="flex order-1 md:order-2 justify-center md:justify-start"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+          >
             <div className="relative z-10 overflow-hidden rounded-3xl shadow-xl">
               <Image
                 src="/products/Docpilot.png"
                 alt="DocSim Product"
-                width={420}
-                height={420}
+                width={520}
+                height={520}
                 className="h-100 w-full max-w-md md:max-w-lg"
                 priority
               />
             </div>
-          </div>
+          </motion.div>
 
-
-          {/* RIGHT IMAGE */}
-          <div>
+          {/* RIGHT CONTENT */}
+          <motion.div
+            className="order-1 md:order-2 md:text-left"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
             <span className="inline-block rounded-full bg-[linear-gradient(90deg,#CD6028_11%,#3E6EB4_100%)] px-5 py-2 text-sm font-medium text-white">
               Docpilot
             </span>
@@ -45,9 +57,9 @@ export default function Docpilot() {
             <div className="mt-3">
               <h4 className="font-semibold text-gray-900">Features:</h4>
               <ul className="mt-3 space-y-2 text-sm text-gray-600">
-                <li>•  OCR and NLP-based data extraction.</li>
+                <li>• OCR and NLP-based data extraction.</li>
                 <li>• Handles unstructured documents across industries.</li>
-                <li>•  Validates fields using external data sources.</li>
+                <li>• Validates fields using external data sources.</li>
               </ul>
             </div>
 
@@ -59,15 +71,23 @@ export default function Docpilot() {
               </ul>
             </div>
 
-            <div className="mt-6 flex flex-col gap-4 sm:flex-row">
-              <button className="rounded-full bg-[#3E6EB4] px-6 py-3 text-sm font-medium text-white transition ">
+            <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:justify-start justify-center">
+              <motion.button
+                className="rounded-full bg-[#3E6EB4] px-6 py-3 text-sm font-medium text-white transition"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 Learn More
-              </button>
-              <button className="rounded-full bg-[#3E6EB4] px-6 py-3 text-sm font-medium text-white transition">
+              </motion.button>
+              <motion.button
+                className="rounded-full bg-[#3E6EB4] px-6 py-3 text-sm font-medium text-white transition"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 Schedule a Demo
-              </button>
+              </motion.button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

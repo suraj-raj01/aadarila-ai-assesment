@@ -24,7 +24,7 @@ export default function IndustriesWeEmpower() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="relative md:top-30"
+          className="relative md:top-30 text-center md:text-start"
         >
           <p className="text-sm font-semibold text-orange-500">
             AI-driven innovation for growth.

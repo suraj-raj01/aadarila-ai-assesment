@@ -5,10 +5,15 @@ import Link from "next/link";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
+import { useRouter } from "next/navigation";
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
 
+    const router = useRouter();
+    const home = () =>{
+        router.push("/")
+    }
     return (
         <>
             <nav className="w-full fixed top-2 z-50 backdrop-blur-xl bg-white/50 border border-white/30">
@@ -16,7 +21,7 @@ export default function Navbar() {
                     <div className="flex h-18 items-center justify-between">
 
                         {/* Logo */}
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-2" onClick={home}>
                             <Image
                                 src="/logo/companylogo.png"
                                 alt="AADRILA Technologies"
