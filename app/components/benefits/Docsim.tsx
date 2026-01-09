@@ -23,9 +23,9 @@ export default function Docsim() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mb-16 text-center"
+          className="mb-16 flex flex-col items-center justify-center text-center"
         >
-          <p className="font-semibold mt-3 max-w-2xl text-md bg-[linear-gradient(90deg,#CD6028_11%,#3E6EB4_100%)] bg-clip-text text-transparent">features and benefits.</p>
+          <p className="font-semibold text-center mt-3 max-w-2xl text-md bg-[linear-gradient(90deg,#CD6028_11%,#3E6EB4_100%)] bg-clip-text text-transparent">features and benefits.</p>
           <h2 className="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Our Products</h2>
         </motion.div>
 
