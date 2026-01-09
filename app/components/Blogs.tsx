@@ -109,7 +109,7 @@ function BlogCard({ blog }: { blog: any }) {
             <p className="mt-3 text-sm leading-relaxed text-gray-600 line-clamp-4">
                 {blog.desc}
             </p>
-            <div className="-m-10 -z-1 relative top-1 h-25 rounded-xl bg-gradient-to-r from-purple-200 to-blue-50" />
+            <div className="-m-10 -z-1 relative top-1 h-25 rounded-xl bg-linear-to-r from-purple-200 to-blue-50" />
         </div>
     );
 }

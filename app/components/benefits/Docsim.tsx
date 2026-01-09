@@ -25,7 +25,7 @@ export default function Docsim() {
           viewport={{ once: true }}
           className="mb-16 text-center"
         >
-          <p className="text-sm font-semibold text-orange-500">features and benefits.</p>
+          <p className="font-semibold mt-3 max-w-2xl text-md bg-[linear-gradient(90deg,#CD6028_11%,#3E6EB4_100%)] bg-clip-text text-transparent">features and benefits.</p>
           <h2 className="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">Our Products</h2>
         </motion.div>
 
@@ -81,7 +81,7 @@ export default function Docsim() {
             viewport={{ once: true }}
             className="order-1 md:order-2 relative flex justify-end"
           >
-            <div className="relative z-10 overflow-hidden rounded-3xl shadow-xl">
+            <div className="relative z-10 overflow-hidden rounded-3xl">
               <Image
                 src="/products/DocSim.png"
                 alt="DocSim Product"

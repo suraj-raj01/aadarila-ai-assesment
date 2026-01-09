@@ -9,20 +9,20 @@ const team = [
     {
         name: "John Carter",
         role: "Product Designer",
-        img: "https://i.pravatar.cc/150?img=12",
+        img: "/team/Member2.png",
         desc: "For this time-constrained generation in a NOW economy, we would want to play our parts. We intend to make Banking not feel out of place.",
 
     },
     {
         name: "Mansi Shukla",
         role: "CEO FutureSphere",
-        img: "https://i.pravatar.cc/150?img=32",
+        img: "/team/Member3.png",
         desc: "For this time-constrained generation in a NOW economy, we would want to play our parts. We intend to make Banking not feel out of place.",
     },
     {
         name: "Alex Brown",
         role: "CTO",
-        img: "https://i.pravatar.cc/150?img=8",
+        img: "/team/Member1.png",
         desc: "For this time-constrained generation in a NOW economy, we would want to play our parts. We intend to make Banking not feel out of place.",
     },
 ];
@@ -91,7 +91,7 @@ export default function TeamSection() {
             </div>
 
             {/* Avatars */}
-            <div className="relative mx-auto mb-16 flex max-w-3xl items-center justify-center gap-10">
+            <div className="relative mx-auto mb-16 flex md:max-w-3xl items-center justify-center gap-10">
                 <motion.img
                     key={left.name}
                     src={left.img}
@@ -104,7 +104,7 @@ export default function TeamSection() {
                     <motion.img
                         key={center.name}
                         src={center.img}
-                        className="h-28 w-28 rounded-full object-cover ring-4 ring-orange-400"
+                        className="h-38 w-38 rounded-full object-cover ring-4 ring-[#CD6028]"
                         initial={{ opacity: 0, scale: 0.7 }}
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 0.7 }}
@@ -129,7 +129,7 @@ export default function TeamSection() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 40 }}
                     transition={{ duration: 0.5 }}
-                    className="relative mx-auto max-w-2xl rounded-xl bg-[#3E6EB4] px-8 py-10 text-center text-white shadow-xl"
+                    className="relative mx-auto max-w-2xl rounded-xl bg-[#3E6EB4] px-8 py-10 text-center text-white"
                 >
                     <div className="absolute -top-3 left-1/2 h-6 w-6 -translate-x-1/2 rotate-45 bg-[#3E6EB4]" />
 

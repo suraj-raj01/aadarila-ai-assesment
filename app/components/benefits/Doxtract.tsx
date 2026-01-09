@@ -69,7 +69,7 @@ export default function Doxtract() {
             viewport={{ once: true }}
             className="order-1 md:order-2 relative flex justify-end"
           >
-            <div className="relative z-10 overflow-hidden rounded-3xl shadow-xl">
+            <div className="relative z-10 overflow-hidden rounded-3xl">
               <Image
                 src="/products/doxtract.png"
                 alt="Doxtract Product"

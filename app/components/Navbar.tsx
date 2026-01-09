@@ -96,7 +96,7 @@ export default function Navbar() {
                             </div>
 
                             {/* Mobile Links */}
-                            <div className="flex flex-col gap-6 text-lg font-medium text-gray-800">
+                            <div className="flex flex-col gap-4 text-md font-medium text-gray-800">
                                 <Link href="/" onClick={() => setOpen(false)}>Home</Link>
                                 <Link href="/industries" onClick={() => setOpen(false)}>Industries</Link>
                                 <Link href="/products" onClick={() => setOpen(false)}>Products</Link>
@@ -107,7 +107,7 @@ export default function Navbar() {
                                 <Link
                                     href="/demo"
                                     onClick={() => setOpen(false)}
-                                    className="mt-6 inline-flex w-fit rounded-full bg-[#3E6EB4] px-8 py-3 text-sm text-white"
+                                    className="mt-3 inline-flex items-center justify-center rounded-full bg-[#3E6EB4] px-8 py-3 text-sm text-center text-white"
                                 >
                                     Get a Demo
                                 </Link>

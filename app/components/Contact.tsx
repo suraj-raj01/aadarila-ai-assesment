@@ -26,7 +26,7 @@ export default function ContactSection() {
 
             <div className="mt-8 space-y-6">
               <div>
-                <h4 className="flex items-center gap-2 underline font-semibold text-gray-900">
+                <h4 className="flex items-center cursor-pointer gap-2 underline font-semibold text-gray-900">
                   <Image
                     src="/logo/Group 50.png"
                     alt="location icon"
@@ -42,7 +42,7 @@ export default function ContactSection() {
               </div>
 
               <div>
-                <h4 className="flex items-center gap-2 underline font-semibold text-gray-900">
+                <h4 className="flex items-center cursor-pointer gap-2 underline font-semibold text-gray-900">
                   <Image
                     src="/logo/Group 50.png"
                     alt="location icon"

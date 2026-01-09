@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function Docpilot() {
   return (
-    <section className="relative overflow-hidden bg-[url('/Industries/circle.png')] bg-no-repeat bg-left bg-contain px-4 sm:px-6 md:px-20 py-20 min-h-145">
+    <section className="relative overflow-hidden bg-[url('/Industries/circle.png')] bg-no-repeat bg-left bg-contain px-4 sm:px-6 md:px-20 py-20 min-h-155">
       {/* Dotted decoration */}
       <div className="absolute right-0 top-5 md:right-30">
         <Image
@@ -20,13 +20,13 @@ export default function Docpilot() {
         <div className="grid grid-cols-1 items-center gap-14 md:grid-cols-2">
           {/* LEFT IMAGE */}
           <motion.div
-            className="flex order-1 md:order-2 justify-center md:justify-start"
+            className="flex order-1 p-2 md:p-0 md:order-2 justify-center md:justify-start"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
           >
-            <div className="relative z-10 overflow-hidden rounded-3xl shadow-xl">
+            <div className="relative z-10 overflow-hidden rounded-3xl">
               <Image
                 src="/products/Docpilot.png"
                 alt="DocSim Product"

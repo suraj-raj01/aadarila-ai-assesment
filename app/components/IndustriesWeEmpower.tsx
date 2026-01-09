@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function IndustriesWeEmpower() {
   return (
-    <section className="relative overflow-hidden bg-[url('/Industries/circle.png')] bg-no-repeat bg-start bg-contain min-h-screen mt-15">
+    <section className="relative overflow-hidden pb-5  bg-[url('/Industries/circle.png')] bg-no-repeat bg-start bg-contain min-h-screen mt-15">
       
       {/* Dotted decorations */}
       <div className="absolute right-120 top-36 hidden md:block">
