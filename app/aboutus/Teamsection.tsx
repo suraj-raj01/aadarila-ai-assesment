@@ -46,6 +46,7 @@ export default function TeamSection() {
                     height={120}
                     width={120}
                     alt=""
+                    className="h-auto w-auto"
                 />
             </div>
 
@@ -55,6 +56,7 @@ export default function TeamSection() {
                     height={200}
                     width={200}
                     alt=""
+                    className="h-auto w-auto"
                 />
             </div>
 
@@ -95,7 +97,7 @@ export default function TeamSection() {
                 <motion.img
                     key={left.name}
                     src={left.img}
-                    className="hidden h-16 w-16 rounded-full object-cover opacity-50 md:block"
+                    className="hidden h-16 w-auto rounded-full object-cover opacity-50 md:block"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 0.5, scale: 1 }}
                 />
@@ -125,10 +127,10 @@ export default function TeamSection() {
             <AnimatePresence mode="wait">
                 <motion.div
                     key={center.name}
-                    initial={{ opacity: 0, y: 40 }}
+                    initial={{ opacity: 0, y: 60 }}
                     animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 40 }}
-                    transition={{ duration: 0.5 }}
+                    exit={{ opacity: 0, y: 20 }}
+                    transition={{ duration: 0.6 }}
                     className="relative mx-auto max-w-2xl rounded-xl bg-[#3E6EB4] px-8 py-10 text-center text-white"
                 >
                     <div className="absolute -top-3 left-1/2 h-6 w-6 -translate-x-1/2 rotate-45 bg-[#3E6EB4]" />

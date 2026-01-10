@@ -13,6 +13,7 @@ export default function Doxtract() {
           height={200}
           width={200}
           alt=""
+          className="h-auto w-auto"
         />
       </div>
 
@@ -52,10 +53,10 @@ export default function Doxtract() {
             </div>
 
             <div className="mt-6 flex flex-col gap-4 sm:flex-row">
-              <button className="rounded-full bg-[#3E6EB4] px-6 py-3 text-sm font-medium text-white transition hover:scale-105">
+              <button className="rounded-full cursor-pointer bg-[#3E6EB4] px-6 py-3 text-sm font-medium text-white transition hover:scale-105">
                 Learn More
               </button>
-              <button className="rounded-full bg-[#3E6EB4] px-6 py-3 text-sm font-medium text-white transition hover:scale-105">
+              <button className="rounded-full cursor-pointer bg-[#3E6EB4] px-6 py-3 text-sm font-medium text-white transition hover:scale-105">
                 Schedule a Demo
               </button>
             </div>
@@ -75,7 +76,7 @@ export default function Doxtract() {
                 alt="Doxtract Product"
                 width={520}
                 height={520}
-                className="h-100 w-full max-w-md md:max-w-lg"
+                className="h-100 w-auto max-w-md md:max-w-lg"
                 priority
               />
             </div>

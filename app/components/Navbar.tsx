@@ -1,5 +1,4 @@
-"use client";
-
+'use client'
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -9,35 +8,57 @@ import { useRouter } from "next/navigation";
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
-
     const router = useRouter();
-    const home = () =>{
-        router.push("/")
-    }
+
+    const home = () => {
+        router.push("/");
+    };
+
+    // Animation variants for menu links
+    const menuVariants = {
+        hidden: { opacity: 0, x: -20 },
+        visible: (i: number) => ({
+            opacity: 1,
+            x: 0,
+            transition: { delay: i * 0.1 },
+        }),
+        exit: { opacity: 0, x: -20 },
+    };
+
     return (
         <>
-            <nav className="w-full fixed top-2 z-50 backdrop-blur-xl bg-white/50 border border-white/30">
+            <motion.nav
+                className="w-full fixed top-2 z-50 backdrop-blur-xl bg-white/50 border border-white/30"
+                initial="hidden"
+                animate="visible"
+                variants={menuVariants}
+            >
                 <div className="mx-auto max-w-full px-6 lg:px-20">
                     <div className="flex h-18 items-center justify-between">
 
                         {/* Logo */}
-                        <div className="flex items-center gap-2" onClick={home}>
+                        <div className="flex items-center gap-2 cursor-pointer" onClick={home}>
                             <Image
                                 src="/logo/companylogo.png"
                                 alt="AADRILA Technologies"
-                                width={100}
-                                height={100}
+                                width={200}
+                                height={200}
+                                className="h-10 w-auto"
                             />
                         </div>
 
                         {/* Desktop Navigation */}
-                        <div className="hidden md:flex items-center font-semibold gap-8 text-sm text-gray-600">
-                            <Link href="/" className="hover:text-[#3E6EB4]">Home</Link>
-                            <Link href="/industries" className="hover:text-[#3E6EB4]">Industries</Link>
-                            <Link href="/products" className="hover:text-[#3E6EB4]">Products</Link>
-                            <Link href="/blog" className="hover:text-[#3E6EB4]">Blog</Link>
-                            <Link href="/contact" className="hover:text-[#3E6EB4]">Contact Us</Link>
-                            <Link href="/about" className="hover:text-[#3E6EB4]">About Us</Link>
+                        <div className="hidden md:flex items-center font-normal gap-8 text-sm text-gray-600">
+                            {["Home", "Industries", "Products", "Blog", "Contact Us", "About Us"].map((item, i) => (
+                                <motion.div
+                                    key={i}
+                                    whileHover={{ y: -2, color: "#3E6EB4", transition: { duration: 0.2 } }}
+                                >
+                                    <Link href={`/${item === "Home" ? "" : item.toLowerCase().replace(/ /g, "")}`} className="focus:text-[#3E6EB4]">
+                                        {item}
+                                    </Link>
+                                </motion.div>
+                            ))}
                         </div>
 
                         {/* CTA + Mobile Menu Button */}
@@ -59,7 +80,7 @@ export default function Navbar() {
                         </div>
                     </div>
                 </div>
-            </nav>
+            </motion.nav>
 
             {/* Mobile Menu */}
             <AnimatePresence>
@@ -87,8 +108,9 @@ export default function Navbar() {
                                 <Image
                                     src="/logo/companylogo.png"
                                     alt="AADRILA Technologies"
-                                    width={90}
-                                    height={90}
+                                    width={100}
+                                    height={100}
+                                    className="h-8 w-auto"
                                 />
                                 <button onClick={() => setOpen(false)}>
                                     <HiX size={26} />
@@ -97,20 +119,43 @@ export default function Navbar() {
 
                             {/* Mobile Links */}
                             <div className="flex flex-col gap-4 text-md font-medium text-gray-800">
-                                <Link href="/" onClick={() => setOpen(false)}>Home</Link>
-                                <Link href="/industries" onClick={() => setOpen(false)}>Industries</Link>
-                                <Link href="/products" onClick={() => setOpen(false)}>Products</Link>
-                                <Link href="/blog" onClick={() => setOpen(false)}>Blog</Link>
-                                <Link href="/contact" onClick={() => setOpen(false)}>Contact Us</Link>
-                                <Link href="/about" onClick={() => setOpen(false)}>About Us</Link>
+                                {[
+                                    { name: "Home", href: "/" },
+                                    { name: "Industries", href: "/industries" },
+                                    { name: "Products", href: "/products" },
+                                    { name: "Blog", href: "/blog" },
+                                    { name: "Contact Us", href: "/contact" },
+                                    { name: "About Us", href: "/aboutus" },
+                                ].map((link, i) => (
+                                    <motion.div
+                                        key={link.href}
+                                        custom={i}
+                                        initial="hidden"
+                                        animate="visible"
+                                        exit="exit"
+                                        variants={menuVariants}
+                                    >
+                                        <Link href={link.href} onClick={() => setOpen(false)}>
+                                            {link.name}
+                                        </Link>
+                                    </motion.div>
+                                ))}
 
-                                <Link
-                                    href="/demo"
-                                    onClick={() => setOpen(false)}
-                                    className="mt-3 inline-flex items-center justify-center rounded-full bg-[#3E6EB4] px-8 py-3 text-sm text-center text-white"
+                                <motion.div
+                                    custom={6}
+                                    initial="hidden"
+                                    animate="visible"
+                                    exit="exit"
+                                    variants={menuVariants}
                                 >
-                                    Get a Demo
-                                </Link>
+                                    <Link
+                                        href="/demo"
+                                        onClick={() => setOpen(false)}
+                                        className="mt-4 inline-flex w-full items-center justify-center rounded-full bg-[#3E6EB4] px-8 py-3 text-sm text-center text-white"
+                                    >
+                                        Get a Demo
+                                    </Link>
+                                </motion.div>
                             </div>
                         </motion.aside>
                     </>

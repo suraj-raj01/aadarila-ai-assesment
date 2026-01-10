@@ -12,7 +12,8 @@ export default function Docpilot() {
           src="/Industries/Group-2.png"
           height={120}
           width={120}
-          alt=""
+          alt="industries"
+          className="h-auto w-auto"
         />
       </div>
 
@@ -32,7 +33,7 @@ export default function Docpilot() {
                 alt="DocSim Product"
                 width={520}
                 height={520}
-                className="h-100 w-full max-w-md md:max-w-lg"
+                className="h-100 w-auto max-w-md md:max-w-lg"
                 priority
               />
             </div>
@@ -73,14 +74,14 @@ export default function Docpilot() {
 
             <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:justify-start justify-center">
               <motion.button
-                className="rounded-full bg-[#3E6EB4] px-6 py-3 text-sm font-medium text-white transition"
+                className="rounded-full bg-[#3E6EB4] cursor-pointer px-6 py-3 text-sm font-medium text-white transition"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 Learn More
               </motion.button>
               <motion.button
-                className="rounded-full bg-[#3E6EB4] px-6 py-3 text-sm font-medium text-white transition"
+                className="rounded-full bg-[#3E6EB4] cursor-pointer px-6 py-3 text-sm font-medium text-white transition"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >

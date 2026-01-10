@@ -12,7 +12,9 @@ export default function Docsim() {
           src='/Industries/Group-2-Copy-2.png'
           height={200}
           width={200}
-          alt=""
+          alt="industries"
+          className="h-auto w-auto"
+          priority
         />
       </div>
 
@@ -63,13 +65,21 @@ export default function Docsim() {
               </ul>
             </div>
 
-            <div className="mt-6 flex flex-col gap-4 sm:flex-row">
-              <button className="rounded-full bg-[#3E6EB4] px-6 py-3 text-sm font-medium text-white transition ">
+            <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:justify-start justify-center">
+              <motion.button
+                className="rounded-full bg-[#3E6EB4] cursor-pointer px-6 py-3 text-sm font-medium text-white transition"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 Learn More
-              </button>
-              <button className="rounded-full bg-[#3E6EB4] px-6 py-3 text-sm font-medium text-white transition">
+              </motion.button>
+              <motion.button
+                className="rounded-full bg-[#3E6EB4] cursor-pointer px-6 py-3 text-sm font-medium text-white transition"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 Schedule a Demo
-              </button>
+              </motion.button>
             </div>
           </motion.div>
 
@@ -87,7 +97,7 @@ export default function Docsim() {
                 alt="DocSim Product"
                 width={520}
                 height={520}
-                className="h-100 w-full max-w-md md:max-w-lg"
+                className="h-100 w-auto max-w-auto md:max-w-auto"
                 priority
               />
             </div>

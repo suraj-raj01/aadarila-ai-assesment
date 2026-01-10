@@ -31,6 +31,7 @@ export default function BlogsSection() {
                     height={150}
                     width={150}
                     alt=""
+                    className="h-auto w-auto"
                 />
             </div>
 
@@ -40,6 +41,7 @@ export default function BlogsSection() {
                     height={200}
                     width={200}
                     alt=""
+                    className="h-auto w-auto"
                 />
             </div>
 
@@ -49,6 +51,7 @@ export default function BlogsSection() {
                     height={200}
                     width={200}
                     alt=""
+                    className="h-auto w-auto"
                 />
             </div>
 

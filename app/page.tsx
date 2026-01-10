@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Hero from "./components/Hero";
 import IndustriesWeEmpower from "./components/IndustriesWeEmpower";
 import Docsim from "./components/benefits/Docsim";

@@ -34,7 +34,7 @@ export default function AboutSection() {
           <div className="flex flex-col items-center md:hidden">
             {/* Image */}
             <div className="mb-3 flex h-20 w-20 items-center justify-center rounded-full bg-[#3E6EB4] text-white shadow-lg">
-              <Image src="/about/Vision_Icon.png" alt="Vision" height={30} width={30} />
+              <Image src="/about/Vision_Icon.png" alt="Vision" height={30} width={30} className="h-auto"/>
             </div>
 
             {/* Title */}
@@ -64,7 +64,7 @@ export default function AboutSection() {
 
             {/* Icon */}
             <div className="mx-0 flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-[#3E6EB4] text-white shadow-lg">
-              <Image src="/about/Vision_Icon.png" alt="Vision" height={30} width={30} />
+              <Image src="/about/Vision_Icon.png" alt="Vision" height={30} width={30} className="h-auto"/>
             </div>
           </div>
         </motion.div>
@@ -82,7 +82,7 @@ export default function AboutSection() {
           <div className="flex flex-col items-center md:hidden">
             {/* Image */}
             <div className="mb-3 flex h-20 w-20 items-center justify-center rounded-full bg-[#3E6EB4] text-white shadow-lg">
-              <Image src="/about/Mission_Icon.png" alt="Vision" height={30} width={30} />
+              <Image src="/about/Mission_Icon.png" alt="Vision" height={30} width={30} className="h-auto"/>
             </div>
 
             {/* Title */}
@@ -101,7 +101,7 @@ export default function AboutSection() {
           <div className="hidden md:flex items-center gap-2 w-full justify-start">
             {/* Icon */}
             <div className="mx-0 flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-[#3E6EB4] text-white shadow-lg">
-              <Image src="/about/Vision_Icon.png" alt="Vision" height={30} width={30} />
+              <Image src="/about/Vision_Icon.png" alt="Vision" height={30} width={30} className="h-auto"/>
             </div>
             {/* Title */}
             <div className="flex items-center gap-4">

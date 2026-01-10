@@ -26,7 +26,7 @@ export default function IndustriesWeEmpower() {
           viewport={{ once: true }}
           className="relative md:top-30 text-center md:text-start"
         >
-          <p className="text-sm font-semibold text-orange-500">
+          <p className="font-semibold mt-3 max-w-2xl text-sm bg-[linear-gradient(90deg,#CD6028_11%,#3E6EB4_100%)] bg-clip-text text-transparent">
             AI-driven innovation for growth.
           </p>
           <h2 className="mt-2 text-3xl font-bold text-gray-900">
@@ -93,7 +93,8 @@ export default function IndustriesWeEmpower() {
           src="/Industries/Group-2-Copy-2.png"
           height={200}
           width={200}
-          alt=""
+          alt="industries"
+          className="h-auto"
         />
       </div>
     </section>

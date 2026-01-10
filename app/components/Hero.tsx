@@ -61,10 +61,10 @@ export default function HeroSection() {
                         </p>
 
                         <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center md:justify-start">
-                            <button className="rounded-full w-full md:w-fit bg-[#3E6EB4] px-8 py-3 text-sm font-medium text-white sm:text-base">
+                            <button className="rounded-full hover:scale-103 cursor-pointer w-full md:w-65 bg-[#3E6EB4] px-8 py-3 text-sm font-medium text-white sm:text-base">
                                 Get a Demo
                             </button>
-                            <button className="rounded-full w-full md:w-fit bg-[#3E6EB4] px-8 py-3 text-sm font-medium text-white sm:text-base">
+                            <button className="rounded-full hover:scale-103 transition cursor-pointer w-full md:w-65 bg-[#3E6EB4] px-8 py-3 text-sm font-medium text-white sm:text-base">
                                 Explore Solutions
                             </button>
                         </div>
@@ -78,7 +78,6 @@ export default function HeroSection() {
                         className="relative flex items-center justify-center"
                     >
                         <div className="relative h-auto md:h-120 w-full">
-
                             {/* ================= MOBILE VIEW ================= */}
                             <div className="md:hidden w-full">
                                 <div className="relative w-full">

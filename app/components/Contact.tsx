@@ -32,6 +32,7 @@ export default function ContactSection() {
                     alt="location icon"
                     height={15}
                     width={15}
+                    className="h-auto w-auto"
                   />
                   U.S. Office
                 </h4>
@@ -48,6 +49,7 @@ export default function ContactSection() {
                     alt="location icon"
                     height={15}
                     width={15}
+                    className="h-auto w-auto"
                   />
                   India Office
                 </h4>
@@ -104,7 +106,7 @@ export default function ContactSection() {
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 type="submit"
-                className="sm:col-span-2 mt-4 rounded-full bg-[#3E6EB4] py-3 text-sm font-semibold text-white transition"
+                className="sm:col-span-2 cursor-pointer mt-4 rounded-full bg-[#3E6EB4] py-3 text-sm font-semibold text-white transition"
               >
                 Send Inquiry
               </motion.button>
